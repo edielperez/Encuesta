@@ -4,10 +4,10 @@ import { logMiddleware } from "../middleware/log";
 import { checkJwt } from "../middleware/session";
 const router = Router()
 
-router.get('/',checkJwt,getSurveys)
-router.get('/:id', checkJwt,getSurvey)
-router.post('/',checkJwt,postSurvey)
-router.put('/:id',checkJwt,updateSurvey)
-router.delete('/:id',checkJwt,deleteSurvey)
+router.get('/',getSurveys)
+router.get('/:id',getSurvey)
+router.post('/',postSurvey)
+router.put('/:id',updateSurvey)
+router.delete('/:id',deleteSurvey)
 
 export {router}

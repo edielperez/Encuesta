@@ -3,11 +3,11 @@ import { Router } from "express"
 import { checkJwt } from "../middleware/session";
  const router = Router()
 
-router.get('/:questionId',checkJwt,getResponses)
+router.get('/:questionId',getResponses)
 router.get('/:questionId/:id',checkJwt,getResponse)
-router.get('/api/results/:idSurvey/',checkJwt,getResults)
-router.post('/',checkJwt,postResponse)
-router.put('/:id',checkJwt,updateResponse)
-router.delete('/:id',checkJwt,deleteResponse)
+router.get('/api/results/:idSurvey/',getResults)
+router.post('/',postResponse)
+router.put('/:id',updateResponse)
+router.delete('/:id',deleteResponse)
 
 export {router}

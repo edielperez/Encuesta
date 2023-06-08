@@ -3,10 +3,10 @@ import {  postQuestion,getQuestions,getQuestion,updateQuestion,deleteQuestion } 
 import { checkJwt } from "../middleware/session";
 const router = Router()
 
-router.get('/:surveyId',checkJwt,getQuestions)
-router.get('/:surveyId/:id',checkJwt,getQuestion)
-router.post('/',checkJwt,postQuestion)
-router.put('/:id',checkJwt,updateQuestion)
-router.delete('/:id',checkJwt,deleteQuestion)
+router.get('/:surveyId',getQuestions)
+router.get('/:surveyId/:id',getQuestion)
+router.post('/',postQuestion)
+router.put('/:id',updateQuestion)
+router.delete('/:id',deleteQuestion)
 
 export {router}
